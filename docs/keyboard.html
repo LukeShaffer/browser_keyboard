@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="styles.css" rel="stylesheet" />
+		<script type="text/javascript" src="keyboard.js"></script>
+	</head>
+
+	<body>
+		<div style="text-align: center;">
+			<h1>In-browser keyboard!</h1>
+			<div style="background-color: white;" id="currentMapping">Single Row (Middle C is g)</div>
+			<button onclick="document.getElementById('currentMapping').innerHTML='Single Row (Middle C is g)'; current_layout='single_row';" id="single-button">Single-row</button>
+			<button onclick="document.getElementById('currentMapping').innerHTML='Double Row (Middle C is z)'; current_layout='double_row';" id="double-button">Double-row</button>
+			<button onclick="HELD_KEYS[' '] = !HELD_KEYS[' ']; if (!HELD_KEYS[' ']) stop_everything();">Toggle Hold Pedal</button>
+		</div>
+	</body>
+</html>
